@@ -4,99 +4,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kopf E5</title>
+    <title>Yale Coffee Ecosystem</title>
     <link rel="stylesheet" href="https://use.typekit.net/nrf1ais.css">
-
     <style>
-        /* My CSS rules in this STYLE section */
+        :root {
+            --yale-blue: #00356b;
+            --coffee-brown: #704214;
+            --cream: #fff5e6;
+            --light-blue: #e6f3ff;
+            --accent-gold: #c4a484;
+        }
+
         body {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            background-color: #f4f4f4;
-            padding: 20px;
+            font-family: "Mercury Text G3", Georgia, serif;
+            background-color: var(--cream);
+            padding: 40px;
+            line-height: 1.6;
+            color: #333;
         }
 
         h1 {
-            color: rgb(0, 28, 99);
+            font-family: "Yale New", serif;
+            color: var(--yale-blue);
             text-align: center;
-            padding-bottom: 40px;
-            font-family: lores-15, sans-serif;
-            color: #8dcaab;
-            font-size: 36px;
+            padding: 30px 0;
+            font-size: 42px;
+            margin-bottom: 40px;
+            border-bottom: 3px solid var(--coffee-brown);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-family: "Yale New", serif;
+            color: var(--yale-blue);
+            margin-bottom: 20px;
         }
 
         .beat {
-            outline-style: solid;
-            outline-width: 5px;
-            outline-color: rgb(27, 29, 65);
-            padding: 10px;
-            max-width: 700px;
-            margin: auto;
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            max-width: 800px;
+            margin: 30px auto;
+            box-shadow: 0 4px 12px rgba(112, 66, 20, 0.1);
+            border-left: 6px solid var(--yale-blue);
+            position: relative;
+            transition: transform 0.2s ease;
+        }
+
+        .beat:hover {
+            transform: translateY(-2px);
+        }
+
+        .beat::before {
+            content: "☕";
+            position: absolute;
+            right: -15px;
+            top: -15px;
+            background: var(--coffee-brown);
+            color: var(--cream);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .byline {
+            text-align: center;
+            font-family: "Yale New", serif;
+            color: var(--coffee-brown);
+            font-size: 18px;
+            margin: -30px auto 40px;
+            position: relative;
+            width: fit-content;
+        }
+
+        .byline::before,
+        .byline::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 50px;
+            height: 1px;
+            background: var(--coffee-brown);
+            opacity: 0.5;
+        }
+
+        .byline::before {
+            right: 100%;
+            margin-right: 15px;
+        }
+
+        .byline::after {
+            left: 100%;
+            margin-left: 15px;
+        }
+
+        h2 span {
+            color: var(--coffee-brown);
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        p {
             margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        p[style="text-align: center;"] {
+            max-width: 800px;
+            margin: 20px auto;
+            background: var(--light-blue);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--yale-blue);
         }
 
         .imageCaption {
             font-style: italic;
+            color: var(--coffee-brown);
+            text-align: center;
+            font-size: 14px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h4 {
+            color: var(--coffee-brown);
+            font-family: "Yale New", serif;
+            text-align: center;
+            margin: 25px 0 10px;
+        }
+
+        b {
+            color: var(--yale-blue);
         }
     </style>
-
 </head>
 
 <body>
-    <!-- My HTML elements goes in this BODY section -->
+    <h1>The Yale Coffee Ecosystem</h1>
+    <div class="byline">By Ethan Kopf</div>
 
-    <h1>Kopf Bubble Map Outline v2</h1>
-
-    <p style="text-align: center; padding-bottom: 40px;">The story that I aim to tell begins with asking the reader to
-        consider the concept of a quick stop for coffee or
-        a snack before or after a class. With what frequency do Yale students choose to go to privately-owned, non-Yale
-        coffee shops, where they may be surrounded by non-Yale-affiliated residents of New Haven, and served by
-        non-Yale-employed people? And conversely, to what degree has Yale’s establishment of University coffee shops
-        drawn students into Yale spaces who would have otherwise chosen to get their coffee or snack at a non-Yale
-        space?
+    <!-- Rest of the HTML content remains exactly the same -->
+    <p style="text-align: center;">Overview: The story that I aim to tell begins with asking the reader to consider the
+        concept of Yale dominating the food and drink industry in areas of New Haven, with a case study on the “quick
+        stop for coffee or a snack before or after a class”. With what frequency do Yale students choose to go to
+        privately-owned, non-Yale coffee shops, where they may be surrounded by non-Yale-affiliated residents of New
+        Haven, and served by non-Yale-employed people? And conversely, to what degree has Yale’s establishment of
+        University coffee shops drawn students into Yale spaces who would have otherwise chosen to get their coffee or
+        snack at a non-Yale space?
     </p>
-
+    <p style="text-align: center;">
+        I have been inspired to analyze this concept of the Yale “Coffee and Snack” Bubble because of my own distaste
+        for Yale’s inclusion of “points” on the partial meal plans. The restrictions on how these points can be spent
+        have compelled me to get my coffee increasingly from the Elm so as not to lose the points, while I would prefer
+        to enjoy time at and patronize independent organizations for coffee and snacks. I hope to show that Yale’s
+        establishment of the Elm, Steep Café, and the Silliman Acorn have significantly impacted students’ decision
+        making surrounding buying coffee and snacks. Added up, these small shifts in student behavior collectively
+        strengthen the 'Yale Bubble' by drawing daily coffee and snack routines - normally opportunities for community
+        interaction - into Yale-controlled spaces.
+    </p>
+    <p style="text-align: center;">
+        Hook: The underground café known as The Elm draws long lines of Yale students eager for coffee or a snack
+        between classes. It’s a windowless café in a basement: what about the Elm would draw such crowds of people?
+    </p>
     <div class="beat">
-        <h2>Beat 1: <span style="color: orange;">New Haven</span> is a town in CT</h2>
+        <h2>Beat A: <span style="color: orange;">Where are Yale Students?
+        </h2>
 
         <p>Map of the top-10 Yale buildings by student class attendance. This map should demonstrate geographic area
             within New Haven where students are most frequently found during the school day. Intention is to familiarize
-            the reader with the traffic patterns of students across Yale and non-Yale spaces.</p>
+            the reader with the traffic patterns of students across Yale and non-Yale spaces.
+        </p>
         <img src=" newHaven.png" style="width:300px;">
+        [Example map! Will be replaced.]
     </div>
 
     <div class="beat">
-        <h2>Beat 2: Yale University is located smack dab in the middle of New Haven</h2>
+        <h2>Beat B: <span style="color: orange;">What was Yale like in 2008?
 
-        <p>Homing in on New Haven in 2011, before the opening of Steep Café, the Silliman Acorn, or the Elm.
-            This map
-            will highlight the proximity of classroom buildings to commercial areas in New Haven. It is not
-            necessarily
-            meant to claim that students commonly patronized independent organizations for coffee and snacks
-            before and
-            after classes, but rather to demonstrate the time before students were in the habit of relying on
-            Yale
-            spaces for these activities.</p>
+        </h2>
 
-        <h4>It started really small...</h4>
-        <p class="imageCaption">Map shows old campus as a blue polygon, with an annotation that says "Yale in
-            1716".</p>
-        <h4>But slowly grew...</h4>
-        <p class="imageCaption">Map shows 1820 campus as a blue polygon, with an annotation that says "Yale in
-            1820".</p>
-        <h4>And grew...</h4>
-        <p class="imageCaption">Map shows 1900 campus as a blue polygon, with an annotation that says "Yale in
-            1900".</p>
+        <p>Homing in on New Haven in 2008, before the opening of Bass Café (2008), KBT/Steep Café (2011), the Silliman
+            Acorn (2017), or the Elm (2021). This map will highlight the proximity of classroom buildings to commercial
+            areas in New Haven. It is not necessarily meant to claim that students commonly patronized independent
+            organizations for coffee and snacks before and after classes, but rather to demonstrate the time before
+            students were in the habit of relying on Yale spaces for these activities.
+        </p>
+
+        <h4>Then we got Bass Café...</h4>
+        <p class="imageCaption">[map changes]</p>
 
     </div>
+    <div class="beat">
+        <h2>Beat C: <span style="color: orange;">How did student’s coffee and snack patterns change by 2017?
+
+        </h2>
+
+        <p>Moving into New Haven in 2017, with a spotlight on the Silliman Acorn and Steep Café. Primary focus on the
+            proximity to Yale classroom buildings, to demonstrate that the closest coffee shop to so many students as
+            they leave or enter a class has changed from a non-Yale-run coffee shop to now be a Yale-run coffee shop.
+            Silliman Acorn and Steep Café are two Yale-owned cafés with different management structures, and I intend to
+            supplement the geographic data with textual information about how Yale has used its advantage as a
+            university to make these two options especially appealing to students: prices subsidized by the University
+            and integration into the meal plan system.
+
+        </p>
+
+        <h4>Next came Silliman Acorn...</h4>
+        <p class="imageCaption">[map changes]</p>
+        <h4>And Steep Café...</h4>
+        <p class="imageCaption">[map changes again]</p>
+
+    </div>
+    <div class="beat">
+        <h2>Beat D: <span style="color: orange;">In 2025, where do Yale students go for their coffee and snacks?
+
+
+        </h2>
+
+        <p>Yale today, displaying the full map, showing the connections between each classroom building and the nearest
+            place a student can buy coffee or a snack, with clear indication of which are Yale-run and which are not
+            Yale run. Potential features on the struggles of the independent coffee businesses on the periphery of
+            Yale’s campus. The reader should now have a renewed understanding of how Yale, in just over a decade, has
+            successfully captured a large market share of students’ desires to grab a coffee or a snack in between
+            classes.
+
+
+        </p>
+        <img src=" newHaven.png" style="width:300px;">
+        [Another fully annotated map moment here]
+
+    </div>
+
+    <div class="beat">
+        <h2>Beat E: <span style="color: orange;">Broadly, what is the extent of Yale’s expansion into new food and drink
+                markets?
+
+        </h2>
+
+        <p>Expanding the lens of the project to Yale’s shift away from the feeling of being a city school through
+            development of civic-like spaces. Building the Well at the Schwartzman center indicates a new self-identity
+            of Yale as a site for nightlife. The grab-and-go service from commons aims to capture the market for
+            early/late lunches by extending hours to 11am-3pm. Butteries capture the late-night snack market.
+
+        </p>
+
+
+    </div>
+    <p style="text-align: center;">
+        Kicker: a feature on the massively long lines at the Elm. Intention is to show that despite having no windows, a
+        sterile interior design, and average food and drink quality, the draws of the <b>convenient</b> location,
+        <b>exclusivity</b>
+        of the space to non-Yale affiliates and integration with the Yale <b>meal plan</b> are sufficient to turn crowds
+        of
+        Yale students inwards into the university for their coffee and snack needs.
+    </p>
 </body>
 
 <script defer>
-    // Wait for all the html to load before you fire any more javascript code in this section
     document.addEventListener("DOMContentLoaded", function () {
         console.log("Page loaded successfully!");
     });
-
-    // My javascript goes below here:
 </script>
 
 </html>
